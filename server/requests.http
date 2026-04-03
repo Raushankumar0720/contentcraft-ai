@@ -1,0 +1,45 @@
+### This file can be used with the "REST Client" extension in VS Code.
+### Just click "Send Request" above each endpoint to test it!
+
+@baseUrl = http://localhost:5000/api
+
+
+### 1. GENERATE CONTENT
+POST {{baseUrl}}/generate
+Content-Type: application/json
+
+{
+  "topic": "AI in Digital Marketing",
+  "platform": "LinkedIn",
+  "audience": "Marketing Professionals"
+}
+
+### 
+
+### 2. MARKETING ASSISTANT (ASK)
+POST {{baseUrl}}/ask
+Content-Type: application/json
+
+{
+  "question": "What are 3 ways to improve organic reach on Instagram in 2026?"
+}
+
+###
+
+### 3. GENERATE VIRAL IDEAS
+POST {{baseUrl}}/ideas
+Content-Type: application/json
+
+{
+  "topic": "Sustainable fashion brands"
+}
+
+###
+
+### 4. IMPROVE CONTENT
+POST {{baseUrl}}/improve
+Content-Type: application/json
+
+{
+  "content": "Check out our new shoes. They are very cool and made of recycled materials. Buy them now on our website."
+}
