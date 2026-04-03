@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const contentRoutes = require('./routes/contentRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
@@ -9,6 +10,7 @@ app.use(cors());
 app.use(express.json()); // Parses incoming JSON requests
 
 // API Routes
+app.use('/api/auth', authRoutes);
 app.use('/api', contentRoutes);
 
 // Simple GET route for browser testing

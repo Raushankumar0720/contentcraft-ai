@@ -13,16 +13,18 @@ const navItems = [
   { name: 'Analytics', path: '/analytics', icon: BarChart2 },
 ];
 
+import logoImage from '../../assets/logo.png';
+
 export default function Sidebar() {
   return (
     <motion.aside 
       initial={{ x: -250 }}
       animate={{ x: 0 }}
-      className="w-64 h-screen glass border-r border-white/5 flex flex-col fixed left-0 top-0"
+      className="w-64 h-screen glass border-r border-white/5 flex flex-col fixed left-0 top-0 z-50"
     >
-      <div className="p-6">
-        <h1 className="text-2xl font-bold text-gradient flex items-center gap-2 tracking-tight">
-          <Wand2 className="text-accent" />
+      <div className="p-6 pb-2">
+        <h1 className="text-2xl font-bold text-gradient flex items-center gap-3 tracking-tight">
+          <img src={logoImage} alt="ContentCraft Logo" className="w-8 h-8 object-contain rounded-lg border border-white/10 shadow-[0_0_15px_rgba(139,92,246,0.3)]" />
           ContentCraft
         </h1>
       </div>
